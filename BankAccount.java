@@ -1,11 +1,11 @@
 class BankAccount {
-    private int numberOfAccounts;
-    private int totalAmount;
+    private static int numberOfAccounts = 0;
+    private static int totalAmount = 0;
     private int checkingBalance;
     private int savingsBalance;
 
     public BankAccount(){
-        numberOfAccounts+=1;
+        BankAccount.numberOfAccounts+=1;
     }
 
     public String test(){
@@ -14,7 +14,7 @@ class BankAccount {
 
     public void deposit(int amount){
         this.checkingBalance += amount;
-        totalAmount += amount;
+        BankAccount.totalAmount += amount;
     }
 
     public void withdraw(int amount){
